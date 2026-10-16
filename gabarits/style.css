@@ -1,0 +1,94 @@
+/* Identité visuelle des posts Instagram / Facebook Avant de Construire. Format portrait 1080 x 1350. */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --nuit: #18202c;
+  --nuit-2: #243044;
+  --orange: #c2510c;
+  --orange-doux: #fdf1e8;
+  --vert: #3f7d3e;
+  --vert-doux: #edf5ec;
+  --rouge: #b42318;
+  --rouge-doux: #fdeceb;
+  --fond: #f6f5f2;
+  --carte: #ffffff;
+  --trait: #e6e8ec;
+  --texte-doux: #4b5563;
+  --sur-nuit: #c8d0dc;
+  --titre: "Archivo", "Segoe UI", sans-serif;
+  --sans: "Inter", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1350px; overflow: hidden; }
+body { background: var(--fond); color: var(--nuit); font-family: var(--sans); position: relative; }
+
+/* En-tête bleu nuit */
+.haut { background: var(--nuit); color: #fff; padding: 58px 72px 48px; position: relative; }
+.haut::after { content: ""; position: absolute; left: 72px; bottom: 0; width: 120px; height: 8px; background: var(--orange); }
+.surtitre { color: #f39a5c; font-weight: 700; letter-spacing: 3px; font-size: 24px; text-transform: uppercase; }
+h1 { font-family: var(--titre); font-weight: 800; font-size: 70px; line-height: 1.06; letter-spacing: -1px; margin-top: 16px; }
+h1 em { font-style: normal; color: #f39a5c; }
+.sous-titre { margin-top: 20px; font-size: 29px; line-height: 1.32; color: var(--sur-nuit); }
+
+/* Zone de contenu : tout doit tenir au-dessus du pied (haut du pied à 1240 px) */
+.contenu { padding: 38px 72px 0; }
+
+/* Grille de cartes numérotées (2 colonnes) */
+.cartes { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.carte { background: var(--carte); border: 2px solid var(--trait); border-radius: 18px; padding: 26px 28px 24px; }
+.num { width: 52px; height: 52px; border-radius: 14px; background: var(--orange); color: #fff; font-family: var(--titre); font-weight: 800; font-size: 28px; display: flex; align-items: center; justify-content: center; }
+.carte h2 { font-family: var(--titre); font-size: 30px; font-weight: 700; line-height: 1.15; margin-top: 14px; }
+.carte p { font-size: 23px; line-height: 1.38; color: var(--texte-doux); margin-top: 10px; }
+
+/* Erreur : le piège, ce que ça coûte, le bon réflexe */
+.etapes { display: flex; flex-direction: column; gap: 20px; }
+.etape { background: var(--carte); border: 2px solid var(--trait); border-left: 10px solid var(--trait); border-radius: 16px; padding: 26px 32px; }
+.etape .etiquette { font-size: 20px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.etape h2 { font-family: var(--titre); font-size: 32px; font-weight: 700; line-height: 1.18; margin-top: 8px; }
+.etape p { font-size: 24px; line-height: 1.4; color: var(--texte-doux); margin-top: 10px; }
+.etape.piege { border-left-color: var(--rouge); }
+.etape.piege .etiquette { color: var(--rouge); }
+.etape.cout { border-left-color: var(--orange); }
+.etape.cout .etiquette { color: var(--orange); }
+.etape.reflexe { border-left-color: var(--vert); background: var(--vert-doux); border-color: #cfe3cd; border-left-color: var(--vert); }
+.etape.reflexe .etiquette { color: var(--vert); }
+
+/* Checklist à cocher */
+.checklist { background: var(--carte); border: 2px solid var(--trait); border-radius: 18px; padding: 14px 36px; }
+.case { display: flex; gap: 22px; align-items: flex-start; padding: 20px 0; border-bottom: 2px solid var(--trait); }
+.case:last-child { border-bottom: 0; }
+.coche { flex: 0 0 40px; height: 40px; border: 3px solid var(--orange); border-radius: 10px; margin-top: 2px; }
+.case h2 { font-size: 27px; font-weight: 700; line-height: 1.22; }
+.case p { font-size: 22px; line-height: 1.38; color: var(--texte-doux); margin-top: 6px; }
+
+/* Comparatif deux colonnes (à éviter / à privilégier, vrai / faux) */
+.duel { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.colonne { background: var(--carte); border: 2px solid var(--trait); border-radius: 18px; padding: 30px 28px; }
+.colonne h2 { font-family: var(--titre); font-size: 31px; margin-bottom: 18px; }
+.colonne li { font-size: 23px; line-height: 1.38; margin: 0 0 14px 26px; }
+.colonne.non { border-top: 10px solid var(--rouge); }
+.colonne.non h2 { color: var(--rouge); }
+.colonne.oui { border-top: 10px solid var(--vert); }
+.colonne.oui h2 { color: var(--vert); }
+
+/* Vrai / faux en liste */
+.affirmations { display: flex; flex-direction: column; gap: 18px; }
+.affirmation { background: var(--carte); border: 2px solid var(--trait); border-radius: 16px; padding: 24px 30px; display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: start; }
+.verdict { font-family: var(--titre); font-weight: 800; font-size: 26px; text-align: center; border-radius: 10px; padding: 8px 0; color: #fff; }
+.verdict.vrai { background: var(--vert); }
+.verdict.faux { background: var(--rouge); }
+.verdict.nuance { background: var(--orange); }
+.affirmation h2 { font-size: 27px; font-weight: 700; line-height: 1.22; }
+.affirmation p { font-size: 22px; line-height: 1.38; color: var(--texte-doux); margin-top: 6px; }
+
+/* Encadré à retenir */
+.retenir { margin-top: 22px; background: var(--orange-doux); border-radius: 16px; padding: 22px 30px; font-size: 24px; line-height: 1.4; }
+.retenir b { color: var(--orange); }
+
+/* Pied de page fixe */
+.pied { position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: var(--fond); border-top: 2px solid var(--trait); display: flex; align-items: center; justify-content: space-between; padding: 0 64px 0 56px; }
+.pied img { height: 74px; width: auto; }
+.signature { font-size: 23px; color: var(--texte-doux); text-align: right; line-height: 1.3; }
+.signature b { color: var(--nuit); }
+.sources { position: absolute; left: 72px; right: 72px; bottom: 124px; font-size: 18px; color: var(--texte-doux); }
