@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="vert" x1="0" x2="1"><stop offset="0" stop-color="#4f8f2a"/><stop offset="1" stop-color="#7db63a"/></linearGradient>
+    <linearGradient id="orange" x1="0" x2="1"><stop offset="0" stop-color="#d4580f"/><stop offset="1" stop-color="#f7931e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="#f6f5f2"/>
+  <g transform="translate(540 560) scale(1.12) translate(-540 -560)">
+  <!-- cheminée -->
+  <rect x="352" y="318" width="64" height="120" fill="#f08a24"/>
+  <rect x="342" y="304" width="84" height="26" rx="4" fill="#f7a94a"/>
+  <!-- murs -->
+  <path d="M330 530 L540 340 L750 530 L750 790 L330 790 Z" fill="#ffffff"/>
+  <rect x="332" y="540" width="26" height="250" fill="#17396b"/>
+  <rect x="722" y="540" width="26" height="200" fill="#17396b"/>
+  <!-- toit -->
+  <path d="M200 610 L540 300 L880 610" fill="none" stroke="#17396b" stroke-width="78" stroke-linejoin="miter" stroke-miterlimit="10"/>
+  <!-- fenêtre -->
+  <g fill="#ef7d1a">
+    <rect x="482" y="520" width="50" height="50"/><rect x="548" y="520" width="50" height="50"/>
+    <rect x="482" y="586" width="50" height="50"/><rect x="548" y="586" width="50" height="50"/>
+  </g>
+  <!-- prairie -->
+  <path d="M250 800 C420 830 560 760 690 730 C740 718 780 720 800 728 C700 742 600 800 470 832 C380 852 300 840 250 800 Z" fill="url(#vert)"/>
+  <path d="M380 845 C540 850 700 780 860 650 C830 740 720 830 560 868 C480 885 420 870 380 845 Z" fill="url(#orange)"/>
+  <path d="M700 860 C780 830 850 770 880 700 C880 780 820 840 740 870 Z" fill="url(#vert)"/>
+  </g>
+</svg>
