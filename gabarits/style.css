@@ -92,3 +92,40 @@ h1 em { font-style: normal; color: #f39a5c; }
 .signature { font-size: 23px; color: var(--texte-doux); text-align: right; line-height: 1.3; }
 .signature b { color: var(--nuit); }
 .sources { position: absolute; left: 72px; right: 72px; bottom: 124px; font-size: 18px; color: var(--texte-doux); }
+
+/* ===== Carrousel : une <section class="diapo"> par image, dans <html class="carrousel"> ===== */
+html.carrousel, html.carrousel body { height: auto; overflow: visible; }
+.diapo { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--fond); }
+.compteur { position: absolute; top: 58px; right: 72px; font-size: 22px; font-weight: 700; letter-spacing: 2px; color: var(--sur-nuit); }
+
+/* Diapo 1 : couverture, tout en bleu nuit */
+.diapo.couverture { background: var(--nuit); color: #fff; }
+.couverture .interieur { position: absolute; left: 72px; right: 72px; top: 150px; bottom: 170px; display: flex; flex-direction: column; justify-content: center; }
+.couverture h1 { font-size: 104px; line-height: 1.02; letter-spacing: -2px; margin-top: 22px; }
+.couverture .sous-titre { font-size: 34px; margin-top: 34px; }
+.couverture .trait { width: 140px; height: 10px; background: var(--orange); margin-top: 40px; }
+.defiler { position: absolute; right: 72px; bottom: 150px; background: var(--orange); color: #fff; font-weight: 700; font-size: 26px; padding: 16px 30px; border-radius: 999px; }
+
+/* Diapos intérieures : en-tête compact */
+.haut.compact { padding: 52px 72px 42px; }
+.haut.compact h1 { font-size: 58px; margin-top: 12px; }
+/* Le contenu occupe tout l'espace entre l'en-tête et le pied, centré verticalement */
+.diapo:not(.couverture):not(.fin) { display: flex; flex-direction: column; }
+.contenu.grand { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 26px; padding: 40px 72px 150px; }
+.contenu.grand .etapes, .contenu.grand .affirmations { gap: 26px; }
+.contenu.grand .etape { padding: 34px 38px; }
+.contenu.grand .etape .etiquette { font-size: 23px; }
+.contenu.grand .etape h2, .contenu.grand .case h2, .contenu.grand .affirmation h2 { font-size: 42px; line-height: 1.16; }
+.contenu.grand .etape p, .contenu.grand .case p, .contenu.grand .affirmation p { font-size: 30px; line-height: 1.38; }
+.contenu.grand .case { padding: 26px 0; }
+.contenu.grand .colonne li { font-size: 28px; }
+.contenu.grand .retenir { font-size: 28px; margin-top: 0; }
+.gros-texte { font-size: 46px; line-height: 1.38; font-weight: 500; }
+.gros-texte b { color: var(--orange); }
+
+/* Dernière diapo : à retenir + enregistrer */
+.diapo.fin .interieur { position: absolute; left: 72px; right: 72px; top: 110px; bottom: 170px; display: flex; flex-direction: column; justify-content: center; gap: 34px; }
+.diapo.fin h2 { font-family: var(--titre); font-size: 64px; line-height: 1.08; letter-spacing: -1px; }
+.diapo.fin h2 em { font-style: normal; color: var(--orange); }
+.action { display: flex; align-items: center; gap: 26px; background: var(--carte); border: 2px solid var(--trait); border-radius: 18px; padding: 26px 32px; font-size: 29px; line-height: 1.35; }
+.action svg { flex: 0 0 56px; height: 56px; }
